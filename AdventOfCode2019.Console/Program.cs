@@ -8,7 +8,14 @@ namespace AdventOfCode2019.Console
     {
         private static void Main(string[] args)
         {
-            ExecuteDay01(args);
+            ExecuteDay02(args);
+            //ExecuteDay01(args);
+        }
+
+        private static void ExecuteDay02(string[] args)
+        {
+            int programPosition = Day02.Day02.ExecutePart01(args[0]);
+            Print($"Position 0 Value: {programPosition}");
         }
 
         private static void ExecuteDay01(string[] args)
