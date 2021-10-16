@@ -21,5 +21,25 @@ namespace AdventOfCode2019.Day01
         {
             return fuelCalculator.Calculate(moduleMass);
         }
+
+        public int CountTotalFuel(IEnumerable<int> moduleMasses)
+        {
+            int fuel = moduleMasses.Sum(x => CountTotalFuelForModule(x));
+            return fuel;
+        }
+
+        private int CountTotalFuelForModule(in int moduleMass)
+        {
+            int fuel = CalculateFuel(moduleMass);
+            int totalFuel = fuel;
+            while (fuel > 0)
+            {
+                fuel = CalculateFuel(fuel);
+                if (fuel > 0)
+                    totalFuel += fuel;
+            }
+
+            return totalFuel;
+        }
     }
 }
