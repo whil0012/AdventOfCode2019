@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AdventOfCode2019.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\levi\\source\\repos\\whil0012\\AdventOfCode2019\\AdventOfCode2019\\Day01\\Day01_Input.txt\""
+    }
+  }
+}
